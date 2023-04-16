@@ -1,0 +1,121 @@
+*{ 
+     margin: 0; 
+     padding: 0; 
+     box-sizing: border-box; 
+ } 
+  
+ body { 
+     background-color: rgba(11, 7, 7, 0.946); 
+     min-height: 100vh; 
+ } 
+ #form { 
+     width: 100%; 
+     min-height: 50px; 
+     margin-bottom: 10px; 
+     padding: 20px; 
+     display: flex; 
+     justify-content: center; 
+     background-color: black; 
+     position: fixed; 
+     top: 0; 
+     z-index: 20; 
+ } 
+ #form input{ 
+      
+     min-width: 200px; 
+     border-radius: 20px; 
+     padding: 10px 20px; 
+     font-size: 1.3rem; 
+     font-weight: 550; 
+     outline: none; 
+     border: none; 
+     color: rgb(11, 1, 1); 
+ } 
+ #form input:focus { 
+     background-color: rgba(8, 6, 6, 0.349); 
+     color: #fcfeff; 
+ } 
+  
+ .main-container { 
+     width: 100%; 
+     display: flex; 
+     flex-wrap: wrap; 
+     justify-content: center; 
+     margin-top: 80px; 
+ } 
+  
+ .each-movie{ 
+     position: relative; 
+     width: 300px; 
+     max-width: 300px; 
+     min-height: 400px; 
+     margin: 20px; 
+     border-radius: 20px; 
+     overflow: hidden; 
+     transition: .5s; 
+     box-shadow: 5px 2px 10px rgb(171, 177, 177), 
+                  0px 1px 5px rgb(95, 97, 93), 
+                  0 0 5px white; 
+ } 
+  
+ .each-movie::before { 
+     content: ''; 
+     position: absolute; 
+     top: 50%; 
+     left: 50%; 
+     transform: translate(-50%,-50%); 
+     width: 100px; 
+     height: 600px; 
+     background: linear-gradient(to left, transparent, #02e8f9); 
+     animation: rotate 5s linear infinite; 
+ } 
+ .each-movie::after{ 
+     content: ''; 
+     position: absolute; 
+     inset: 4px; 
+     background: black; 
+     border-radius: 20px; 
+ } 
+ .each-movie:hover { 
+     transform: translateY(-10px); 
+ } 
+  
+ .container { 
+     box-sizing: border-box; 
+     height: calc(100% - 10px); 
+     position: relative; 
+     border-radius: 20px; 
+     padding: 10px; 
+     background-color: rgba(225, 209, 209, 0.2); 
+     margin: 5px; 
+     z-index: 2; 
+ } 
+  
+ .container img { 
+     width: 100%; 
+     min-height: 300px; 
+     border-radius: 20px; 
+     background-repeat: no-repeat; 
+     background-position: center; 
+     background-size: cover; 
+ }  
+ .content h2 { 
+     display: block; 
+     text-align: center; 
+     color: #fff; 
+     padding: 10px; 
+     font-size: 1.3rem; 
+ } 
+ .content p { 
+     color: #fcfeffd1; 
+     text-align: center; 
+ } 
+  
+ @keyframes rotate { 
+     0%{ 
+         transform: translate(-50%,-50%) rotate(0deg); 
+     } 
+     100%{ 
+         transform: translate(-50%,-50%) rotate(360deg); 
+     } 
+ }
